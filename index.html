@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+    
+    </header>
+
+    <main class="content">
+    <div class="app">
+        <div class="allign">
+            <button class="none"  onclick="currency()" href="">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFD700"><path d="M480-40q-112 0-206-51T120-227v107H40v-240h240v80h-99q48 72 126.5 116T480-120q75 0 140.5-28.5t114-77q48.5-48.5 77-114T840-480h80q0 91-34.5 171T791-169q-60 60-140 94.5T480-40Zm-36-160v-52q-47-11-76.5-40.5T324-370l66-26q12 41 37.5 61.5T486-314q33 0 56.5-15.5T566-378q0-29-24.5-47T454-466q-59-21-86.5-50T340-592q0-41 28.5-74.5T446-710v-50h70v50q36 3 65.5 29t40.5 61l-64 26q-8-23-26-38.5T482-648q-35 0-53.5 15T410-592q0 26 23 41t83 35q72 26 96 61t24 77q0 29-10 51t-26.5 37.5Q583-274 561-264.5T514-250v50h-70ZM40-480q0-91 34.5-171T169-791q60-60 140-94.5T480-920q112 0 206 51t154 136v-107h80v240H680v-80h99q-48-72-126.5-116T480-840q-75 0-140.5 28.5t-114 77q-48.5 48.5-77 114T120-480H40Z"/></svg>
+            </button>
+      </div>
+       <input id="display" readonly>
+       <div class="key-press">
+        <button class="special" onclick="toClearDisplay('C')">C</button>
+        <button class="special" onclick="toDisplay('()')">( )</button>
+        <button class="special" onclick="toDisplay('%')"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFf"><path d="M300-520q-58 0-99-41t-41-99q0-58 41-99t99-41q58 0 99 41t41 99q0 58-41 99t-99 41Zm0-80q25 0 42.5-17.5T360-660q0-25-17.5-42.5T300-720q-25 0-42.5 17.5T240-660q0 25 17.5 42.5T300-600Zm360 440q-58 0-99-41t-41-99q0-58 41-99t99-41q58 0 99 41t41 99q0 58-41 99t-99 41Zm0-80q25 0 42.5-17.5T720-300q0-25-17.5-42.5T660-360q-25 0-42.5 17.5T600-300q0 25 17.5 42.5T660-240Zm-444 80-56-56 584-584 56 56-584 584Z"/></svg></button>
+        <button class="operators" onclick="toDisplay('/')">/</button>
+        <button onclick="toDisplay('7')">7</button>
+        <button onclick="toDisplay('8')">8</button>
+        <button onclick="toDisplay('9')">9</button>
+        <button class="operators" onclick="toDisplay('*')"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFf"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></button>
+        <button onclick="toDisplay('4')">4</button>
+        <button onclick="toDisplay('5')">5</button>
+        <button onclick="toDisplay('6')">6</button>
+        <button class="operators" onclick="toDisplay('-')"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFf"><path d="M200-440v-80h560v80H200Z"/></svg></button>
+        <button onclick="toDisplay('1')">1</button>
+        <button onclick="toDisplay('2')">2</button>
+        <button onclick="toDisplay('3')">3</button>
+        <button class="operators" onclick="toDisplay('+')"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFf"><path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/></svg></button>
+        <button onclick="toDisplay('+/-')">+/-</button>
+        <button onclick="toDisplay('0')">0</button>
+        <button onclick="toDisplay('.')">.</button>
+        <button class="operators" onclick="toCalculateResult('=')"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFf"><path d="M160-280v-120h640v120H160Zm0-280v-120h640v120H160Z"/></svg></button>
+       </div>
+    </div>
+
+
+    <div class="calculator">
+        <div>
+        <div class="allign" >
+            <button class="none" onclick="back()" href="">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFD700"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+            </button>
+        </div>
+        <h1>Currency Converter</h1>
+    
+        <div class="converter">
+        
+          <input type="number" id="currencyAmount" placeholder="Amount" />
+          <select id="currencyFrom">
+            <option value="INR">INR</option> 
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+          </select>
+          <select id="currencyTo">
+            <option value="INR">INR</option> 
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+          </select>
+          <button class="money" onclick="convertCurrency()">Convert</button>
+          <p id="currencyResult"></p>
+          </div>
+        </div>
+
+    </main>
+<script src="index.js"></script>
+</body>
+</html>
